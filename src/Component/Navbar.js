@@ -5,7 +5,7 @@ import { faSearch, faBell, faCoins, faUser } from '@fortawesome/free-solid-svg-i
 
 const Navbar = () => {
   return (
-    <div className="flex items-center justify-between p-4 bg-[#121212]">
+    <div className="flex items-center justify-between p-4 bg-[#121212] border-b border-[#7E7F7F]">
       
       {/* Left Section: Logo */}
       <div className="flex items-center">
