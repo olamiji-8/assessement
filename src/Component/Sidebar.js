@@ -1,6 +1,6 @@
 import React from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faGamepad, faTrophy, faCoins, faCamera, faLock, faUsers } from '@fortawesome/free-solid-svg-icons';
+import { faGamepad, faTrophy, faCoins, faCamera, faLock, faUsers, faSignOutAlt } from '@fortawesome/free-solid-svg-icons';
 
 const Sidebar = () => {
   return (
@@ -9,7 +9,7 @@ const Sidebar = () => {
       <div className="absolute left-0 top-0 w-1 h-full bg-[#7E7F7F]"></div>
 
       {/* Sidebar Items */}
-      <div className="flex flex-col mt-10 space-y-6">
+      <div className="flex flex-col mt-10 space-y-6 flex-grow">
         
         {/* Tournaments */}
         <div className="flex items-center space-x-4 px-6 py-3 bg-gray-800 rounded-lg">
@@ -17,36 +17,34 @@ const Sidebar = () => {
           <span>Tournaments</span>
         </div>
 
-        {/* Leaderboards */}
+        {/* Other Items */}
         <div className="flex items-center space-x-4 px-6 py-3 hover:bg-gray-700 cursor-pointer">
           <FontAwesomeIcon icon={faTrophy} className="text-gray-400" />
           <span>Leaderboards</span>
         </div>
-
-        {/* Token Shop */}
         <div className="flex items-center space-x-4 px-6 py-3 hover:bg-gray-700 cursor-pointer">
           <FontAwesomeIcon icon={faCoins} className="text-gray-400" />
           <span>Token Shop</span>
         </div>
-
-        {/* Live Betting */}
         <div className="flex items-center space-x-4 px-6 py-3 hover:bg-gray-700 cursor-pointer">
           <FontAwesomeIcon icon={faCamera} className="text-gray-400" />
           <span>Live Betting</span>
         </div>
-
-        {/* Content Locker */}
         <div className="flex items-center space-x-4 px-6 py-3 hover:bg-gray-700 cursor-pointer">
           <FontAwesomeIcon icon={faLock} className="text-gray-400" />
           <span>Content Locker</span>
         </div>
-
-        {/* Community */}
         <div className="flex items-center space-x-4 px-6 py-3 hover:bg-gray-700 cursor-pointer">
           <FontAwesomeIcon icon={faUsers} className="text-gray-400" />
           <span>Community</span>
         </div>
 
+      </div>
+
+      {/* Log Out Button at the Bottom */}
+      <div className="flex items-center justify-center py-4 bg-[#8B0000] hover:bg-[#A52A2A] cursor-pointer">
+        <FontAwesomeIcon icon={faSignOutAlt} className="mr-2 text-white" />
+        <span className="text-white text-lg">LOG - OUT</span>
       </div>
     </div>
   );
